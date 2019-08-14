@@ -12,7 +12,8 @@ import View.viewFrame;
 
 /**
  *
- * @author DaveHell
+ * @author Julian David Parra Alvarez
+ * @author German Mauricio Garcia Gomez
  */
 public class ListMVC {
 
