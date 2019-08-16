@@ -27,5 +27,17 @@ public class encaVariables {
     public void setVaraible(String varaible) {
         this.varaible = varaible;
     }
+    
+    private String datoVarible;
+
+    public String getDatoVarible() {
+        return datoVarible;
+    }
+
+    public void setDatoVarible(String datoVarible) {
+        this.datoVarible = datoVarible;
+    }
+    
+    public String miDato;
 
 }

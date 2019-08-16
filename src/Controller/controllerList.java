@@ -18,15 +18,16 @@ public class controllerList implements ActionListener {
     private encaVariables variable;
     private modelList modC;
     private viewFrame frm;
-    DefaultListModel modelolista;
+    DefaultListModel def_lista;
 
     public controllerList(encaVariables variable, modelList modC, viewFrame frm) {
         this.variable = variable;
         this.modC = modC;
-        this.frm = frm;
+        this.frm = frm;        
         this.frm.btn_agregar.addActionListener(this);
-        modelolista = new DefaultListModel();  
-        frm.jlist_valores.setModel(modelolista);        
+        this.frm.btn_listar.addActionListener(this);
+        def_lista = new DefaultListModel();  
+        frm.jlist_valores.setModel(def_lista);        
         
     }
 
@@ -36,16 +37,31 @@ public class controllerList implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {        
+        encaVariables enca = new encaVariables();
         if (e.getSource() == frm.btn_agregar) {
             variable.setVaraible(frm.txt_valor.getText());
-            String a = frm.txt_valor.getText();
+            enca.miDato = frm.txt_valor.getText();             
             if (modC.insertar(variable)) {
                 JOptionPane.showMessageDialog(null, "Registro Guardado");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al Guardar");
-            }
-            modelolista.addElement(a);
+            }            
+            def_lista.addElement(enca.miDato);
         }
+        
+        if (e.getSource() == frm.btn_listar) {            
+            ArrayList pegarlista = modC.vervar();
+            def_lista.clear();
+            def_lista.addElement(pegarlista);      
+            
+                
+            
+            
+            
+        }
+        
     }
+    
+    
 }

@@ -13,18 +13,24 @@ public class modelList {
    
     public boolean insertar(encaVariables var){
         listaVariables.add(var.getVaraible());
-        System.out.println(" =========== ");
-//        listaVariables.stream().forEach((listaVariable) -> {
-//            System.out.println("Lista de Variables = " + listaVariable);
-//        });
         mostrar(listaVariables);
         return true;
     }
     
+    public ArrayList vervar(){         
+        return mostrar(listaVariables);
+        
+    }
+    
     public ArrayList mostrar (ArrayList Listar) {
         listaVariables.stream().forEach((String listaVariable) -> {            
-            System.out.println("Lista de Variables2 = " + listaVariable);
+            //System.out.println("Lista de Variables2 = " + listaVariable);
+            encaVariables enca = new encaVariables();
+            enca.miDato = listaVariable;
         });
         return Listar;
     }
+    
+    
+    
 }
