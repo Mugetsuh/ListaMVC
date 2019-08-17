@@ -5,14 +5,18 @@ package Model;
 import java.util.ArrayList;
 
 /**
- *
- * @author DaveHell
+ * ManagedBean que inicializa las variables a utilizar en el index
+ * @author Germán García
+ * @author Julián Parra
  */
 public class modelList {
+    /**
+     * Almacena el nombre de la lista en un arreglo
+     */
     ArrayList<String> listaVariables = new ArrayList<String>();
    
     public boolean insertar(encaVariables var){
-        listaVariables.add(var.getVaraible());
+        listaVariables.add(var.getVariable());
         mostrar(listaVariables);
         return true;
     }

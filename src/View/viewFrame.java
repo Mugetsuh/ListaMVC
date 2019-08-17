@@ -6,8 +6,9 @@
 package View;
 
 /**
- *
- * @author DaveHell
+ * ManagedBean que inicializa las variables a utilizar en el index
+ * @author Germán García
+ * @author Julián Parra
  */
 public class viewFrame extends javax.swing.JFrame {
 

@@ -6,37 +6,34 @@
 package Model;
 
 /**
- *
- * @author DaveHell
+ * ManagedBean que inicializa las variables a utilizar en el index
+ * @author Germán García
+ * @author Julián Parra
  */
 public class encaVariables {
-    
-    private String varaible;
+    /**
+     * Almacena el nombre de la variable para el resultado de datos
+     */
+    private String variable;
 
-    public encaVariables(String varaible) {
-        this.varaible = varaible;
+    public encaVariables(String variable) {
+        this.variable = variable;
     }
     
     public encaVariables() {
     }
 
-    public String getVaraible() {
-        return varaible;
+    public String getVariable() {
+        return variable;
     }
 
-    public void setVaraible(String varaible) {
-        this.varaible = varaible;
+    public void setVariable(String variable) {
+        this.variable = variable;
     }
     
-    private String datoVarible;
-
-    public String getDatoVarible() {
-        return datoVarible;
-    }
-
-    public void setDatoVarible(String datoVarible) {
-        this.datoVarible = datoVarible;
-    }
+    /**
+     * Almacena el nombre de los valores
+     */
     
     public String miDato;
 
