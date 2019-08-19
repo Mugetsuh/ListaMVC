@@ -15,23 +15,33 @@ import javax.swing.DefaultListModel;
  * @author Julián Parra
  */
 public class controllerList implements ActionListener {
+    
     /**
      * Nombre de la variable publica del metodo encapsulado de modelo
      */
     private encaVariables var_enca;
+    
     /**
      * Nombre del metodo del modelo
      */
     private modelList var_modelo;
+    
     /**
      * Nombre del metodo de la vista
      */
     private viewFrame vista_formulario;
+    
     /**
      * Nombre del DefaultListModel
      */
     DefaultListModel def_lista;
 
+    /**
+     * Metodo que se encarga de guardar las variables recibidas de modelo y la vista
+     * @param var_enca variable del modelo
+     * @param var_modeolo variable del modelo que se encarga de la logica
+     * @param vista_formulario variable que trae el formulario de la vista
+     */
     public controllerList(encaVariables var_enca, modelList var_modeolo, viewFrame vista_formulario) {
         this.var_enca = var_enca;
         this.var_modelo = var_modeolo;
@@ -43,11 +53,18 @@ public class controllerList implements ActionListener {
         
     }
 
+    /**
+     * Constructor que inicializa el titulo  
+     */
     public void iniciar() {
         vista_formulario.setTitle("Productos");
         vista_formulario.setLocationRelativeTo(null);
     }
 
+    /**
+     * Metodo que toma las acciones del formulario
+     * @param e 
+     */
     @Override
     public void actionPerformed(ActionEvent e) {        
         encaVariables enca = new encaVariables();
@@ -65,12 +82,7 @@ public class controllerList implements ActionListener {
         if (e.getSource() == vista_formulario.btn_listar) {            
             ArrayList pegarlista = var_modelo.vervar();
             def_lista.clear();
-            def_lista.addElement(pegarlista);      
-            
-                
-            
-            
-            
+            def_lista.addElement(pegarlista);                  
         }
         
     }

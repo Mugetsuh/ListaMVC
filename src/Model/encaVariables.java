@@ -11,30 +11,45 @@ package Model;
  * @author Julián Parra
  */
 public class encaVariables {
+    
     /**
      * Almacena el nombre de la variable para el resultado de datos
      */
     private String variable;
 
+    /**
+     * Se encarga de guardar la variable
+     * @param variable 
+     */
     public encaVariables(String variable) {
         this.variable = variable;
     }
     
+    /**
+     * Constructor 
+     */
     public encaVariables() {
     }
 
+    /**
+     * Se encarga de retornar la variable
+     * @return variable
+     */
     public String getVariable() {
         return variable;
     }
 
+    /**
+     * Se encarga de guardar la variable
+     * @param variable 
+     */
     public void setVariable(String variable) {
         this.variable = variable;
     }
     
     /**
      * Almacena el nombre de los valores
-     */
-    
+     */    
     public String miDato;
 
 }
